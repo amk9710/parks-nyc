@@ -28,34 +28,34 @@ map.on('load', function () {
                 'DPR',
                 '#317338',
                 'DOE',
-                '#f7d496',
+                '#f57058',
                 'NYCHA',
-                '#FF9900',
+                '#072ef0',
                 'DPR/DOE',
-                '#f7cabf',
+                '#b258c4',
              /* other */ '#ccc'
             ]
         }
     })
 
 
-    // Add popup to parks layer
-    map.on('click', 'parks', function (e) {
-        var popupContent = '<div class="popup-content">' +
-            '<h3>' + e.features[0].properties.name311 + '</h3>' +
-            '<p>' + e.features[0].properties.acres + ' acres</p>' +
-            '</div>';
-        new mapboxgl.Popup()
-            .setLngLat(e.lngLat)
-            .setHTML(popupContent)
-            .addTo(map);
-    });
+  // Add popup to parks layer
+  map.on('click', 'parks', function (e) {
+    var popupContent = '<div class="popup-content">' +
+        '<h3>' + e.features[0].properties.name311 + '</h3>' +
+        '<p>' + e.features[0].properties.acres + ' acres</p>' +
+        '</div>';
+    new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(popupContent)
+        .addTo(map);
+});
 
-    // Change cursor to pointer when hovering over parks layer
-    map.on('mouseenter', 'parks', function () {
-        map.getCanvas().style.cursor = 'pointer';
-    });
-    map.on('mouseleave', 'parks', function () {
-        map.getCanvas().style.cursor = '';
-    });
+// Change cursor to pointer when hovering over parks layer
+map.on('mouseenter', 'parks', function () {
+    map.getCanvas().style.cursor = 'pointer';
+});
+map.on('mouseleave', 'parks', function () {
+    map.getCanvas().style.cursor = '';
+});
 });
