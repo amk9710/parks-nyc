@@ -1,3 +1,7 @@
+html,
+head,
+body,
+
 #main-container {
     height: 100%;
     width: 100%;
@@ -39,12 +43,11 @@ nav {
 }
 
 #sidebar {
-    min-width: 200px;
+    width: 348px;
     padding: 1rem;
     font-size: 0.9rem;
     overflow-y: scroll;
     box-sizing: border-box;
-    background-color: #fff;
 }
 
 #map {
@@ -75,8 +78,11 @@ nav {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 100%;
-}
+    left: 200px; /* or the same width as your sidebar */
+    right: 0;
+    width: auto;
+    margin-left: 200px; /* or the same width as your sidebar */
+  }
 
 .popup-content {
     font-size: 1.2rem;

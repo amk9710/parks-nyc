@@ -17,7 +17,7 @@ map.on('load', function () {
   })
 
   map.addLayer({
-    id: 'parks-props-fill',
+    id: 'parks',
     type: 'fill',
     source: 'parks',
     paint: {
