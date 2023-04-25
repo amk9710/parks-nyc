@@ -39,11 +39,12 @@ nav {
 }
 
 #sidebar {
-    width: 348px;
+    min-width: 200px;
     padding: 1rem;
     font-size: 0.9rem;
     overflow-y: scroll;
     box-sizing: border-box;
+    background-color: #fff;
 }
 
 #map {
