@@ -37,6 +37,23 @@ map.on('load', function () {
     }
   })
 
+  // Add legend to map
+  var legendItems = [{ label: 'DPR', color: '#317338' }, { label: 'DOE', color: '#f57058' }, { label: 'NYCHA', color: '#072ef0' }, { label: 'DPR/DOE', color: '#b258c4' }, { label: 'Other', color: '#ccc' }];
+
+  var legend = document.getElementById('legend');
+
+  legendItems.forEach(function (item) {
+    var div = document.createElement('div');
+    div.className = 'legend-item';
+    var marker = document.createElement('div');
+    marker.className = 'legend-marker';
+    marker.style.backgroundColor = item.color;
+    var label = document.createElement('div');
+    label.innerHTML = item.label;
+    div.appendChild(marker);
+    div.appendChild(label);
+    legend.appendChild(div);
+  });
 
   // Add popup to parks layer
   map.on('click', 'parks', function (e) {
