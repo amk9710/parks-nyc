@@ -1,2 +1,2 @@
 # parks-nyc
-not functional yet! 
+A map of NYC parks with their jurisdictions
